@@ -10,6 +10,11 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CardSpotlight } from "@/components/ui/card-spotlight";
+import { MdOutlineDevices } from "react-icons/md";
+import { BiCategory } from "react-icons/bi";
+import { GrAnnounce } from "react-icons/gr";
+import { SiMaterialdesignicons } from "react-icons/si";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -263,28 +268,28 @@ export default function Home() {
 
           {/* Section 2: What We Do */}
           <div id="section-2" className="w-full min-h-screen flex flex-col gap-20 items-center justify-center py-30 px-20 pointer-events-auto">
-            <div className="flex flex-col w-full items-center">
+            <div className="flex flex-col gap-5 w-full items-center">
               <div className="w-full text-center orbitron-400 text-white tracking-[10] text-5xl">WHAT WE DO</div>
-              <div className="text-center orbitron-400 text-white w-1/2 text-md">At ZYNEX, we specialize in turning ideas into reality. From designing intuitive interfaces to developing robust software, we handle every stage of the process. Our team also manages the deployment, ensuring your product is seamlessly launched and fully supported. We deliver tailored, high-quality solutions that help your business thrive.</div>
+              <div className="text-center orbitron-400 text-white w-1/2 text-md">At <span className="text-[#AE00FF]">ZYNEX</span>, we specialize in turning ideas into reality. From designing intuitive interfaces to developing robust software, we handle every stage of the process. Our team also manages the deployment, ensuring your product is seamlessly launched and fully supported. We deliver tailored, high-quality solutions that help your business thrive.</div>
             </div>
             <div className="w-full flex flex-wrap justify-around gap-10">
 
-              <div className="bg-white/20 rounded-2xl border-white/20 border flex flex-col w-1/4 backdrop-blur-[10px]">
-                <div className="w-full text-center orbitron-400 text-white tracking-[10] text-xl border-b border-white/20 p-5">WEB DEVELOPMENT</div>
-                <div className="p-5 text-center text-md">We create custom websites that are not only visually stunning but also provide a seamless user experience. Our team of developers uses the latest technologies to build responsive and scalable websites that meet your business needs.</div>
-              </div>
-              <div className="bg-white/20 rounded-2xl border-white/20 border flex flex-col w-1/4 backdrop-blur-[10px]">
-                <div className="w-full text-center orbitron-400 text-white tracking-[10] text-xl border-b border-white/20 p-5">WEB DEVELOPMENT</div>
-                <div className="p-5 text-center text-md">We create custom websites that are not only visually stunning but also provide a seamless user experience. Our team of developers uses the latest technologies to build responsive and scalable websites that meet your business needs.</div>
-              </div>
-              <div className="bg-white/20 rounded-2xl border-white/20 border flex flex-col w-1/4 backdrop-blur-[10px]">
-                <div className="w-full text-center orbitron-400 text-white tracking-[10] text-xl border-b border-white/20 p-5">WEB DEVELOPMENT</div>
-                <div className="p-5 text-center text-md">We create custom websites that are not only visually stunning but also provide a seamless user experience. Our team of developers uses the latest technologies to build responsive and scalable websites that meet your business needs.</div>
-              </div>
-              <div className="bg-white/20 rounded-2xl border-white/20 border flex flex-col w-1/4 backdrop-blur-[10px]">
-                <div className="w-full text-center orbitron-400 text-white tracking-[10] text-xl border-b border-white/20 p-5">WEB DEVELOPMENT</div>
-                <div className="p-5 text-center text-md">We create custom websites that are not only visually stunning but also provide a seamless user experience. Our team of developers uses the latest technologies to build responsive and scalable websites that meet your business needs.</div>
-              </div>
+              <CardSpotlight className="bg-white/20 rounded-2xl border-white/20 border flex flex-col w-1/4 backdrop-blur-[10px]">
+                <div className="w-full z-2 orbitron-400 text-white tracking-[10] text-xl border-b border-white/20 py-5 px-5 flex gap-5 items-center"><MdOutlineDevices className="text-7xl text-[#AE00FF]"/> WEB DEVELOPMENT</div>
+                <div className="p-5 z-2 text-center text-md"> Futuristic, responsive websites built with modern technologies.</div>
+              </CardSpotlight>
+              <CardSpotlight className="bg-white/20 rounded-2xl border-white/20 border flex flex-col w-1/4 backdrop-blur-[10px]">
+                <div className="w-full z-2 orbitron-400 text-white tracking-[10] text-xl border-b border-white/20 py-2 px-5 flex gap-5 items-center"> <BiCategory className="text-8xl text-[#AE00FF]"/> System Development</div>
+                <div className="p-5 z-2 text-center text-md">Custom systems for managing business operations efficiently.</div>
+              </CardSpotlight>
+              <CardSpotlight className="bg-white/20 rounded-2xl border-white/20 border flex flex-col w-1/4 backdrop-blur-[10px]">
+                <div className="w-full z-2 orbitron-400 text-white tracking-[10] text-xl border-b border-white/20 py-5 px-5 flex gap-5 items-center"> <GrAnnounce className="text-6xl text-[#AE00FF]"/> Digital Marketing</div>
+                <div className="p-5 z-2 text-center text-md">Reach more customers with smart online advertising. </div>
+              </CardSpotlight>
+              <CardSpotlight className="bg-white/20 rounded-2xl border-white/20 border flex flex-col w-1/4 backdrop-blur-[10px]">
+                <div className="w-full z-2 orbitron-400 text-white tracking-[10] text-xl border-b border-white/20 py-5 px-8 flex gap-8 items-center"> <SiMaterialdesignicons className="text-6xl text-[#AE00FF]"/> Graphic Designing</div>
+                <div className="p-5 z-2 text-center text-md">Logos, banners, and full brand identity for your business.</div>
+              </CardSpotlight>
             </div>
           </div>
 
