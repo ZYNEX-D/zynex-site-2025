@@ -297,7 +297,7 @@ export default function Home() {
             </div>
           </div>
 
-          <id className="w-full h-screen"></id>
+          <div className="w-full h-screen"></div>
 
         </div>
       </div>
