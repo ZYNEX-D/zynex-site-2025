@@ -381,7 +381,7 @@ export default function Home() {
 
         {/* Sticky Canvas Container */}
         <div id="model-container" className="sticky top-0 h-screen w-full overflow-hidden z-0">
-          <div className="absolute inset-0 z-3">
+          <div className="absolute inset-0 z-3 pointer-events-none">
             <Canvas className="hidden md:block" dpr={[1, 1.5]} gl={{ antialias: true, powerPreference: "high-performance" }} camera={{ position: [0, 0, 0], fov: 30 }}>
               <directionalLight position={[1.61, -1.15, 0.7]} intensity={0.1} />
               <pointLight
@@ -430,7 +430,7 @@ export default function Home() {
             </Canvas>
           </div>
 
-          <div id="sec-welcome" className="w-full h-full absolute p-5 left-0 flex flex-col gap-5 items-center justify-center z-4 backdrop-blur-xs md:backdrop-blur-sm pointer-events-auto">
+          <div id="sec-welcome" className="w-full h-full absolute p-5 left-0 flex flex-col gap-5 items-center justify-center z-4 backdrop-blur-xs md:backdrop-blur-sm pointer-events-none">
             <div ref={welcomeTextRef} className="w-full flex gap-5 -top-50 flex-col justify-center items-center relative">
               <div className="w-full text-center orbitron-400 text-white tracking-[10] text-base md:text-5xl">WELCOME TO</div>
               <div className="w-full text-center orbitron-400 text-white tracking-[10] hidden md:block text-7xl">ZYNEX DEVELOPMENTS</div>
